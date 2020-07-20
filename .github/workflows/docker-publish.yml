@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/SocialNetworkReact@develop
+      - uses: actions/checkout@develop
 
       - name: Run tests
         run: |
