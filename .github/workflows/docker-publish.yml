@@ -3,8 +3,8 @@ name: Docker
 on:
   push:
     # Publish `master` as Docker `latest` image.
-    branches-ignore:
-      - master
+    #    branches-ignore:
+    #  - master
 
     # Publish `v1.2.3` tags as releases.
     tags:
@@ -22,7 +22,7 @@ jobs:
   # See also https://docs.docker.com/docker-hub/builds/automated-testing/
   test:
     runs-on: ubuntu-latest
-
+    if: git.ref == 'refs/heads/develop'
     steps:
       - uses: actions/checkout@v2
 
